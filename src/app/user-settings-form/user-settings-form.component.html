@@ -1,5 +1,58 @@
-<form>
-  <input placeholder="name">
-  <button>Ok</button>
-</form>
+<div class="container">
+  <h2>User Settings</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" class="form-control">
+    </div>
 
+    <div class="form-check form-group">
+      <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers">
+      <label for="emailOffers" class="form-check-label">
+        Email Special Offers
+      </label>
+    </div>
+
+    <h5>User Interface Style</h5>
+    <div class="form-group">
+
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="interface" id="lightInterface" value="light" checked>
+        <label for="lightInterface" class="form-check-label">
+          Light
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="interface" id="mediumInterface" value="medium" checked>
+        <label for="mediumInterface" class="form-check-label">
+          Medium
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input type="radio" class="form-check-input" name="interface" id="darkInterface" value="dark" checked>
+        <label for="darkInterface" class="form-check-label">
+          Dark
+        </label>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label for="subscriptionType">Subscription Type</label>
+      <select id="subscriptionType" class="form-control">
+        <option>Monthly</option>
+        <option>Annual</option>
+        <option>Lifetime</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea name="" id="notes" cols="30" rows="3" class="form-control"></textarea>
+    </div>
+
+    <button class="btn btn-primary">Send</button>
+  </form>
+</div>
