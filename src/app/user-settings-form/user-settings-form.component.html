@@ -14,6 +14,34 @@
       </div>
     </div>
 
+    <div class="form-group">
+      <label for="startDate">Start Date</label>
+      <input type="text"
+        placeholder="Datepicker"
+        class="form-control"
+        [(ngModel)]="startDate" name="starDate" id="startDate"
+        bsDaterangepicker>
+    </div>
+
+    <div class="form-group">
+      <label for="startTime">Start Time</label>
+      <timepicker [(ngModel)]="startTime" name="starTime" id="startTime"></timepicker>
+    </div>
+
+    <div class="form-group">
+      User Rating
+      <rating [(ngModel)]="userRating" [max]="maxRating" [readonly]="isReadonly"
+        name="userRating" id="userRating"
+        [titles]="['one','two','three']"></rating>
+    </div>
+    User Rating: {{ userRating }}
+
+    <button type="button" class="btn btn-primary" name="singleModel"
+            [(ngModel)]="singleModel" btnCheckbox
+            btnCheckboxTrue="On" btnCheckboxFalse="Off">
+      {{ singleModel }}
+    </button>
+
     <div class="form-check form-group">
       <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">
       <label for="emailOffers" class="form-check-label">
@@ -24,25 +52,13 @@
     <h5>User Interface Style</h5>
     <div class="form-group">
 
-      <div class="form-check">
-        <input type="radio" class="form-check-input" name="interface" id="lightInterface" value="light" checked [(ngModel)]="userSettings.interfaceStyle">
-        <label for="lightInterface" class="form-check-label">
-          Light
-        </label>
-      </div>
-
-      <div class="form-check">
-        <input type="radio" class="form-check-input" name="interface" id="mediumInterface" value="medium" [(ngModel)]="userSettings.interfaceStyle">
-        <label for="mediumInterface" class="form-check-label">
-          Medium
-        </label>
-      </div>
-
-      <div class="form-check">
-        <input type="radio" class="form-check-input" name="interface" id="darkInterface" value="dark" [(ngModel)]="userSettings.interfaceStyle">
-        <label for="darkInterface" class="form-check-label">
-          Dark
-        </label>
+      <div class="btn-group">
+        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"
+               btnRadio="Light" tabindex="0" role="button">Light</label>
+        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"
+               btnRadio="Medium" tabindex="0" role="button">Medium</label>
+        <label class="btn btn-primary" [(ngModel)]="userSettings.interfaceStyle" name="interfaceStyle"
+               btnRadio="Dark" tabindex="0" role="button">Dark</label>
       </div>
 
     </div>
